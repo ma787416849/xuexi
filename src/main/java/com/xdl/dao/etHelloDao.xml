@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xdl.dao.EtHelloDao">
+    <select id="findAllEtOccurLog"
+        resultMap="subjectmap">
+        select * from et_hello
+    </select>
+	<resultMap type="com.xdl.bean.EtHello" id="subjectmap">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+	</resultMap>
+</mapper>
